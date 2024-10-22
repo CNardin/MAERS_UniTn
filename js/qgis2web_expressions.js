@@ -820,16 +820,3 @@ function exp_TmeanBuildings_2rule4_eval_expression(context) {
         return ((feature['Tmean']  > 1.1) && (feature['Tmean']  <= 2.0));
     }
 }
-
-
-function exp_TmeanBuildings_2rule5_eval_expression(context) {
-    // Risonanza = 'si'
-
-    var feature = context.feature;
-    
-    if (feature.properties) {
-        return (feature.properties['Risonanza']  == 'si');
-    } else {
-        return (feature['Risonanza']  == 'si');
-    }
-}
