@@ -754,3 +754,82 @@ function fnc__specialcol_(values, context) {
 function fnc_project_color(values, context) {
     return false;
 };
+
+
+
+function exp_TmeanBuildings_2rule0_eval_expression(context) {
+    // Tmean >= 0 AND Tmean <= 0.1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['Tmean']  >= 0.0) && (feature.properties['Tmean']  <= 0.1));
+    } else {
+        return ((feature['Tmean']  >= 0.0) && (feature['Tmean']  <= 0.1));
+    }
+}
+
+
+function exp_TmeanBuildings_2rule1_eval_expression(context) {
+    // Tmean > 0.1 AND Tmean <= 0.45
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['Tmean']  > 0.1) && (feature.properties['Tmean']  <= 0.45));
+    } else {
+        return ((feature['Tmean']  > 0.1) && (feature['Tmean']  <= 0.45));
+    }
+}
+
+
+function exp_TmeanBuildings_2rule2_eval_expression(context) {
+    // Tmean > 0.45 AND Tmean <= 0.75
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['Tmean']  > 0.45) && (feature.properties['Tmean']  <= 0.75));
+    } else {
+        return ((feature['Tmean']  > 0.45) && (feature['Tmean']  <= 0.75));
+    }
+}
+
+
+function exp_TmeanBuildings_2rule3_eval_expression(context) {
+    // Tmean > 0.75 AND Tmean <= 1.1
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['Tmean']  > 0.75) && (feature.properties['Tmean']  <= 1.1));
+    } else {
+        return ((feature['Tmean']  > 0.75) && (feature['Tmean']  <= 1.1));
+    }
+}
+
+
+function exp_TmeanBuildings_2rule4_eval_expression(context) {
+    // Tmean > 1.1 AND Tmean <= 2
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['Tmean']  > 1.1) && (feature.properties['Tmean']  <= 2.0));
+    } else {
+        return ((feature['Tmean']  > 1.1) && (feature['Tmean']  <= 2.0));
+    }
+}
+
+
+function exp_TmeanBuildings_2rule5_eval_expression(context) {
+    // Risonanza = 'si'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Risonanza']  == 'si');
+    } else {
+        return (feature['Risonanza']  == 'si');
+    }
+}
